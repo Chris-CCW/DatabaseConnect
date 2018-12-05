@@ -10,6 +10,7 @@ public class MainDB {
 
 	public static void main(String[] args) {
 		Connect.accessDB();
+		Create.AddRecord();
 		Read.ReadRecord();
 		Connect.disconnectDB();
 	}
