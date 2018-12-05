@@ -1,6 +1,5 @@
 package pkgDBconnect;
 
-
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -12,9 +11,6 @@ public class Connect {
 	static final String PASS = "S4kur4uch1R1k0";
 
 	public static void accessDB() {
-		//Connection conn = null;
-		//Statement stmt = null;
-
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
@@ -27,22 +23,23 @@ public class Connect {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			Read.ReadRecord();
-			try {
-				if (MainDB.stmt != null)
-					MainDB.conn.close();
-			} catch (SQLException se) {
-			}
-			try {
-				if (MainDB.conn != null)
-					MainDB.conn.close();
-			} catch (SQLException se) {
-				se.printStackTrace();
-			}
 		}
-		System.out.println("Connection closed.");
-
 	}
 
+	
+	public static void disconnectDB() {
+		System.out.println("Disconnecting from database...");
+		try {
+			if (MainDB.stmt != null)
+				MainDB.conn.close();
+		} catch (SQLException se) {
+		}
+		try {
+			if (MainDB.conn != null)
+				MainDB.conn.close();
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+		System.out.println("Connection closed.");
+	}
 }
