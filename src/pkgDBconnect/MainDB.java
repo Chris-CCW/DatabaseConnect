@@ -12,6 +12,7 @@ public class MainDB {
 		Connect.accessDB();
 		Create.addRecord();
 		Update.updateRecord();
+		Delete.deleteRecord();
 		Read.readRecord();
 		Connect.disconnectDB();
 	}

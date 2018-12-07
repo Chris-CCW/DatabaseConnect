@@ -20,7 +20,7 @@ public class Update {
 			System.out.println("Error while executing UPDATE statement");
 			e.printStackTrace();
 		}
-
+		System.out.println("End of update code");
 	}
 
 }
