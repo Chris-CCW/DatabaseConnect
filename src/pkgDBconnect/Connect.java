@@ -26,7 +26,7 @@ public class Connect {
 		}
 	}
 
-	
+
 	public static void disconnectDB() {
 		System.out.println("Disconnecting from database...");
 		try {

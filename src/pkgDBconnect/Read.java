@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class Read {
 
-	public static void ReadRecord() {
+	public static void readRecord() {
 
 		System.out.println("Creating statement...");
 		try {

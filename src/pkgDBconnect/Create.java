@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class Create {
 
-	public static void AddRecord() {
+	public static void addRecord() {
 		System.out.println("Inserting records into the table...");
 		try {
 			MainDB.stmt = MainDB.conn.createStatement();
